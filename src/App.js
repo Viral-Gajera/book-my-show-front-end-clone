@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.page";
 import Movies from "./pages/Movies.page";
 import Movie from "./pages/Movie.page";
-import Plays from "./pages/Plays.page";
 import PageNotFound from "./pages/PageNotFound.page";
 
 import { createContext } from "react";
@@ -28,7 +27,6 @@ function App() {
                     <Route path="/home" element={<Home />} />
                     <Route path="/movie/:movieID" element={<Movie />} />
                     <Route path="/movies/:searchString" element={<Movies />} />
-                    <Route path="/plays" element={<Plays />} />
                     <Route path="/*" element={<PageNotFound />} />
                 </Routes>
             </GlobalContext.Provider>

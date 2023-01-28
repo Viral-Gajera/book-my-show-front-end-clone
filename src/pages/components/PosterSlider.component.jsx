@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import { NavLink } from "react-router-dom";
 
 function PosterSlider(props) {
+
     function giveSlidesPerView() {
         if (window.innerWidth > 1024) return 5;
         else if (window.innerWidth > 768) return 4;
@@ -52,13 +53,13 @@ function PosterSlider(props) {
             >
                 {props.data.map(function (element, index) {
                     return (
-                        <SwiperSlide className="bg-transparent " key={index}>
+                        <SwiperSlide className="bg-transparent " key={index} onClick={()=>{props?.setMovieID(element.id)}} >
                             <NavLink
                                 className={
                                     "flex flex-col items-start justify-start"
                                 }
                                 to={`/movie/${element.id}`}
-                                onClick={()=>{props?.setMovieID(element.id)}}
+                                
                             >
                                 <div className="">
                                     <div className="h-[30vw] max-h-[300px] w-full rounded-t-xl overflow-hidden">
