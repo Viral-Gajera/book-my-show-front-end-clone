@@ -24,12 +24,12 @@ function App() {
         <section>
             <GlobalContext.Provider value={globalData}>
                 <Routes>
-                    <Route path="/book-my-show-front-end-clone/" element={<Home />} />
-                    <Route path="/book-my-show-front-end-clone/home" element={<Home />} />
-                    <Route path="/book-my-show-front-end-clone/movie/:movieID" element={<Movie />} />
-                    <Route path="/book-my-show-front-end-clone/movies/:searchString" element={<Movies />} />
-                    <Route path="/book-my-show-front-end-clone/plays" element={<Plays />} />
-                    <Route path="/book-my-show-front-end-clone/*" element={<PageNotFound />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/movie/:movieID" element={<Movie />} />
+                    <Route path="/movies/:searchString" element={<Movies />} />
+                    <Route path="/plays" element={<Plays />} />
+                    <Route path="/*" element={<PageNotFound />} />
                 </Routes>
             </GlobalContext.Provider>
         </section>
