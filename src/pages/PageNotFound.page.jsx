@@ -6,7 +6,7 @@ function PageNotFound(){
     return(
         <div>
             <Navbar />
-            <h1 className='text-3xl font-bold flex justify-center items-center h-[500px]' >Page Not Found</h1>
+            <h1 className='text-3xl font-bold flex justify-center items-center h-[500px]' >These feature is not implemented</h1>
         </div>
     )
 }
