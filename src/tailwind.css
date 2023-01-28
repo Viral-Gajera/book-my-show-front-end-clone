@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HERO SWIPER STYLING */
+
+.hero .swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.hero .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    border-radius: 5px;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .swiper-button-next {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url("./pages/images/arrow-right.png");
+    background-color: rgba(113, 113, 113, 0.5);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+
+    border-radius: 3px;
+}
+
+.hero .swiper-button-next::after {
+    display: none;
+}
+
+.hero .swiper-button-prev {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url("./pages/images/arrow-left.png");
+    background-color: rgba(113, 113, 113, 0.5);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+
+    border-radius: 3px;
+}
+
+.hero .swiper-button-prev::after {
+    display: none;
+}
+
+.hero .swiper-pagination-bullet-active {
+    color: #fff;
+    background: rgb(255, 255, 255);
+}
+
+/* POSTER SLIDER STYLING */
+
+.poster .swiper {
+    width: 100%;
+    height: auto;
+}
+
+.poster .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+
+.poster .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poster .swiper-button-next {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    background-color: rgba(113, 113, 113, 0.8);
+    background-image: url("./pages/images/arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    background-position: center;
+
+    border-radius: 50%;
+    top: 45%;
+}
+
+.poster .swiper-button-next::after {
+    display: none;
+}
+
+.poster .swiper-button-prev {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    background-image: url("./pages/images/arrow-left.png");
+    background-color: rgba(113, 113, 113, 0.8);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+
+    border-radius: 50%;
+
+    top: 45%;
+}
+
+.poster .swiper-button-prev::after {
+    display: none;
+}
+
+.poster .swiper-pagination-bullet {
+    display: none;
+}
+
+.poster .swiper-pagination-bullet-active {
+    color: #fff;
+    background: rgb(155, 155, 155);
+}
+
+/* LIVE EVENT SECTION SLIDER STYLING */
+
+.live-events .swiper {
+    width: 100%;
+    height: auto;
+}
+
+.live-events .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+
+.live-events .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.live-events .swiper-button-next {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    background-color: rgba(113, 113, 113, 0.8);
+    background-image: url("./pages/images/arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    background-position: center;
+
+    border-radius: 50%;
+    top: 50%;
+}
+
+.live-events .swiper-button-next::after {
+    display: none;
+}
+
+.live-events .swiper-button-prev {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    background-image: url("./pages/images/arrow-left.png");
+    background-color: rgba(113, 113, 113, 0.8);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+
+    border-radius: 50%;
+
+    top: 50%;
+}
+
+.live-events .swiper-button-prev::after {
+    display: none;
+}
+
+.live-events .swiper-pagination-bullet {
+    display: none;
+}
+
+.live-events .swiper-pagination-bullet-active {
+    color: #fff;
+    background: rgb(155, 155, 155);
+}
