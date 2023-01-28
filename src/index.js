@@ -6,7 +6,7 @@ import App from "./App";
 
 const root = ReactDOMClient.createRoot(document.getElementById("root"));
 root.render(
-    <BrowserRouter>
+    <BrowserRouter basename="/book-my-show-front-end-clone" >
         <App />
     </BrowserRouter>
 );
