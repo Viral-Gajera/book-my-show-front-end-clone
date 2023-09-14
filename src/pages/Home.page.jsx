@@ -30,16 +30,31 @@ function Home() {
 
     // REQUEST : RECOMMENDED MOVIES
     useEffect(function () {
-        axios
-            .get(
-                `https://api.themoviedb.org/3/movie/299536/recommendations?api_key=ee61aca8288bec54accdffecc3752e52&language=en-US`
-            )
-            .then(function (responce) {
-                setRecommendedMovies(responce.data.results);
-            })
-            .catch(function (err) {
-                console.log("err : " + err);
-            });
+        if (localStorage.getItem("recommendedMovies")) {
+            axios
+                .get(
+                    `https://api.themoviedb.org/3/movie/${localStorage.getItem(
+                        "recommendedMovies"
+                    )}/recommendations?api_key=ee61aca8288bec54accdffecc3752e52&language=en-US`
+                )
+                .then(function (responce) {
+                    setRecommendedMovies(responce.data.results);
+                })
+                .catch(function (err) {
+                    console.log("err : " + err);
+                });
+        } else {
+            axios
+                .get(
+                    `https://api.themoviedb.org/3/trending/all/day?api_key=ee61aca8288bec54accdffecc3752e52`
+                )
+                .then(function (responce) {
+                    setRecommendedMovies(responce.data.results);
+                })
+                .catch(function (err) {
+                    console.log("err : " + err);
+                });
+        }
     }, []);
 
     // REQUEST : UPCOMING MOVIES
@@ -82,7 +97,7 @@ function Home() {
 
             {/* TRENDING MOVIES */}
             <section>
-                <div className="w-[80%] mx-auto mt-20 ">
+                <div className="md:w-[80%] w-[95%] mx-auto mt-20 ">
                     <h1 className="mb-3 text-2xl font-bold text-secondary">
                         Trending Movies
                     </h1>
@@ -93,7 +108,7 @@ function Home() {
             {/* ENTERTAINMENT CARD */}
             <section>
                 <NavLink>
-                    <div className="w-[80%] h-auto mx-auto my-10">
+                    <div className="w-[95%] md:w-[80%] h-auto mx-auto my-10">
                         <img
                             src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png"
                             alt=""
@@ -104,7 +119,7 @@ function Home() {
 
             {/* LIVE EVENTS */}
             <section>
-                <div className="w-[80%] mx-auto mt-20 ">
+                <div className="w-[95%] md:w-[80%] mx-auto mt-20 ">
                     <h1 className="mb-3 text-2xl font-bold text-secondary">
                         The Best of Live Events
                     </h1>
@@ -114,10 +129,10 @@ function Home() {
 
             {/* PREMIRER SECTION */}
             <section className="py-10 my-20 bg-secondary">
-                <div className="w-[80%] mx-auto mb-5">
+                <div className="w-[90%] md:w-[80%] mx-auto mb-5">
                     <img src={premiere} alt="" />
                 </div>
-                <div className="w-[80%] mx-auto">
+                <div className="w-[90%] md:w-[80%] mx-auto">
                     <h1 className="-mb-1 text-2xl font-bold text-white ">
                         PREMIERE
                     </h1>
@@ -130,7 +145,7 @@ function Home() {
 
             {/* RECOMMANDED MOVIES */}
             <section>
-                <div className="w-[80%] mx-auto mt-8 ">
+                <div className="w-[95%] md:w-[80%] mx-auto mt-8">
                     <h1 className="mb-3 text-2xl font-bold text-secondary">
                         Recommanded Movies
                     </h1>

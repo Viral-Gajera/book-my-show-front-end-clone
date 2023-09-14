@@ -54,8 +54,7 @@ function Navbar() {
                                 placeholder="Search Movies, Events, Sports and Activities"
                                 onKeyDown={(e) => {
                                     if (e.key === "Enter") {
-                                        console.log(searchString);
-                                        navigate(`/movies/${searchString}`, { state: { searchString } })
+                                        navigate(`/search/${searchString}`, { state: { searchString } })
                                     }
                                 }}
 
@@ -143,7 +142,7 @@ function Navbar() {
                     ></div>
 
                     {/* SIDE BAR */}
-                    <div className="bg-white fixed top-0 right-0 w-[400px] h-full z-20">
+                    <div className="bg-white fixed top-0 right-0 w-[300px] md:w-[400px] h-full z-20">
                         <div className="w-full h-[60px] bg-primary flex justify-between items-center">
                             <div className="px-3 text-white"></div>
                             <div className="px-3">

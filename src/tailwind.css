@@ -90,7 +90,7 @@
 }
 
 .poster .swiper-button-next {
-    display: block;
+    display: none;
     width: 30px;
     height: 30px;
 
@@ -109,7 +109,7 @@
 }
 
 .poster .swiper-button-prev {
-    display: block;
+    display: none;
     width: 30px;
     height: 30px;
 

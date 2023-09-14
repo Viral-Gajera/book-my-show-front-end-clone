@@ -16,11 +16,13 @@ function Movies() {
             )
             .then(function (responce) {
                 setSearchResults(responce.data.results);
+                let recommendedMovies = responce.data.results[0].id;
+                localStorage.setItem("recommendedMovies", recommendedMovies);
             })
             .catch(function (err) {
                 console.log("err : " + err);
             });
-    });
+    },[]);
 
     return (
         <div>

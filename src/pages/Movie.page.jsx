@@ -19,7 +19,7 @@ function Movie() {
 
     let [movieDetail, setMovieDetail] = useState({
         genres: [],
-        backdrop_path: "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+        backdrop_path: "",
     });
     let [similarMovies, setSimilarMovies] = useState([]);
 
@@ -110,17 +110,17 @@ function Movie() {
 
                 {/* ABOUT THE MOVIE */}
                 <div className="mt-10">
-                    <div className="w-[80%] mx-auto">
+                    <div className="w-[95%] md:w-[80%] mx-auto">
                         <h1 className="my-2 text-2xl font-bold">
                             About the movie
                         </h1>
-                        <p>{movieDetail.overview}</p>
+                        <p className="text-justify" >{movieDetail.overview}</p>
                     </div>
                 </div>
 
                 {/* RECOMMANDED MOVIES */}
                 <div className="mt-10">
-                    <div className="w-[80%] mx-auto">
+                    <div className="w-[95%] md:w-[80%] mx-auto">
                         <h1 className="my-3 text-2xl font-bold">
                             Recommended Movies
                         </h1>

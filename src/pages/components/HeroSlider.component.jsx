@@ -12,29 +12,29 @@ function HeroSlider() {
     let [movies, setMovies] = useState([]);
 
     let imagesLink = useMemo(function () {
-        return (
-            [
-                "https://assets-in.bmscdn.com/promotions/cms/creatives/1672137034486_ritvizweb.jpg",
-                "https://assets-in.bmscdn.com/promotions/cms/creatives/1674640211828_freeweb.jpg",
-                "https://assets-in.bmscdn.com/promotions/cms/creatives/1674205067860_harshrajkotweb.jpg",
-                "https://assets-in.bmscdn.com/promotions/cms/creatives/1674652877937_myweb.jpg",
-                "https://assets-in.bmscdn.com/promotions/cms/creatives/1670502578966_web.jpg",
-                "https://assets-in.bmscdn.com/promotions/cms/creatives/1674652847610_offerweb.jpg"
-            ]
-        );
-    },[]);
+        return [
+            "https://assets-in.bmscdn.com/promotions/cms/creatives/1672137034486_ritvizweb.jpg",
+            "https://assets-in.bmscdn.com/promotions/cms/creatives/1674640211828_freeweb.jpg",
+            "https://assets-in.bmscdn.com/promotions/cms/creatives/1674205067860_harshrajkotweb.jpg",
+            "https://assets-in.bmscdn.com/promotions/cms/creatives/1674652877937_myweb.jpg",
+            "https://assets-in.bmscdn.com/promotions/cms/creatives/1670502578966_web.jpg",
+            "https://assets-in.bmscdn.com/promotions/cms/creatives/1674652847610_offerweb.jpg",
+        ];
+    }, []);
 
-    useEffect(function () {
-        let moivesElement = imagesLink.map(function (link, index) {
-            return (<SwiperSlide key={index}>
-                <img
-                    src={link}
-                    alt=""
-                />
-            </SwiperSlide> );
-        });
-        setMovies(moivesElement);
-    }, [imagesLink]);
+    useEffect(
+        function () {
+            let moivesElement = imagesLink.map(function (link, index) {
+                return (
+                    <SwiperSlide key={index}>
+                        <img src={link} alt="" />
+                    </SwiperSlide>
+                );
+            });
+            setMovies(moivesElement);
+        },
+        [imagesLink]
+    );
 
     return (
         <section className="my-2">
